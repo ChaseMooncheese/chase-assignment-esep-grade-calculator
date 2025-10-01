@@ -4,6 +4,15 @@ type GradeCalculator struct {
 	grades []Grade
 }
 
+func (gc *GradeCalculator) getPassOrFail() string {
+	gradeLetter := gc.GetFinalGrade()
+	if gradeLetter == "A" || gradeLetter == "B" || gradeLetter == "C" {
+		return "Pass"
+	} else {
+		return "Fail"
+	}
+}
+
 type GradeType int
 
 const (
